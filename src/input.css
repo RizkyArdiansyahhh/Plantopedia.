@@ -12,6 +12,9 @@
 /* * {
   border: 1px solid red;
 } */
+body {
+  height: 3000px;
+}
 button {
   position: relative;
   display: inline-block;
@@ -72,3 +75,48 @@ button:hover .button-text {
 }
 
 /* HERO SECTION END*/
+
+/* KALIMAT SECTION START */
+.kata-slide {
+  @apply text-4xl md:text-5xl font-semibold mx-9 uppercase;
+}
+.kalimat-slide-1 {
+  @apply py-5;
+  animation: 18s slideToRight infinite linear;
+}
+.kalimat-1:hover .kalimat-slide-1 {
+  animation-play-state: paused;
+}
+.kalimat-2:hover .kalimat-slide-2 {
+  animation-play-state: paused;
+}
+.kalimat-3:hover .kalimat-slide-3 {
+  animation-play-state: paused;
+}
+
+.kalimat-slide-2 {
+  @apply py-5;
+  animation: 25s slideToLeft infinite linear;
+}
+.kalimat-slide-3 {
+  @apply py-5;
+  animation: 7s slideToRight infinite linear;
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* KALIMAT SECTION END */
