@@ -71,7 +71,7 @@ button:hover .button-text {
 }
 
 .frame-active {
-  @apply backdrop-blur-sm block;
+  @apply block;
 }
 
 /* HERO SECTION END*/
@@ -120,3 +120,6 @@ button:hover .button-text {
   }
 }
 /* KALIMAT SECTION END */
+/* INFORMASI SECTION START */
+
+/* INFORMASI SECTION END */

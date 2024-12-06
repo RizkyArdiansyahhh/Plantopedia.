@@ -1,6 +1,7 @@
 import {
   animate,
   scroll,
+  inView,
 } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,6 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event untuk frame video
   eventFrameVide();
+
+  // Animasi count pada section informasi
+  countPersentasePunah();
 });
 
 // funtion untuk menduplikat kalimat yang terdapat animasi scrolling horizontal
@@ -43,18 +47,56 @@ function changeWord(words) {
 }
 
 function eventFrameVide() {
-  const btnPlay = document.getElementById("btn-play");
-  btnPlay.addEventListener("click", () => {
-    const containerFrame = document.querySelector(".container-frame");
-    const btnClose = document.querySelector(".btn-close");
-    containerFrame.classList.remove("hidden");
-    containerFrame.classList.add("frame-active");
+  const btnPlay = document.querySelectorAll(".btn-play-video");
 
-    btnClose.addEventListener("click", () => {
-      if (containerFrame.classList.contains("frame-active")) {
-        containerFrame.classList.remove("frame-active");
-        containerFrame.classList.add("hidden");
+  btnPlay.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      let containerFrame;
+      if (index === 0) {
+        containerFrame = document.querySelector(".container-frame-1");
+      } else if (index === 1) {
+        containerFrame = document.querySelector(".container-frame-2");
       }
+
+      containerFrame.classList.remove("hidden");
+      containerFrame.classList.add("frame-active");
+
+      const btnClose = containerFrame.querySelector(".btn-close");
+
+      btnClose.addEventListener(
+        "click",
+        () => {
+          containerFrame.classList.remove("frame-active");
+          containerFrame.classList.add("hidden");
+        },
+        { once: true }
+      );
     });
+  });
+}
+
+// Function animasi count pada section informasi
+function countPersentasePunah() {
+  inView("#persentase-punah", () => {
+    setTimeout(() => {
+      const persentasePunah = document.querySelector("#persentase-punah");
+      const target = 26276;
+      let currennt = 20000;
+      const interval = setInterval(() => {
+        persentasePunah.textContent = currennt;
+        currennt += 12;
+        if (currennt > target) {
+          clearInterval(interval);
+        }
+      }, 1);
+    }, 1000);
+  });
+
+  const linkPunah = document.querySelector(".link-punah");
+  linkPunah.addEventListener("click", () => {
+    window.open(
+      "https://dataindonesia.id/varia/detail/data-jumlah-spesies-tumbuhan-yang-terancam-punah-di-dunia-pada-2023",
+      "_blank"
+    );
   });
 }
