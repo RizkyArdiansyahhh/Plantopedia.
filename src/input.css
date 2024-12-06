@@ -68,7 +68,7 @@ button:hover .button-text {
 }
 
 .frame-active {
-  @apply backdrop-blur-sm white/80 block;
+  @apply backdrop-blur-sm block;
 }
 
 /* HERO SECTION END*/

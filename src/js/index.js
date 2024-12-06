@@ -8,8 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 const btnPlay = document.getElementById("btn-play");
 btnPlay.addEventListener("click", () => {
   const containerFrame = document.querySelector(".container-frame");
+  const btnClose = document.querySelector(".btn-close");
   containerFrame.classList.remove("hidden");
   containerFrame.classList.add("frame-active");
+
+  btnClose.addEventListener("click", () => {
+    if (containerFrame.classList.contains("frame-active")) {
+      containerFrame.classList.remove("frame-active");
+      containerFrame.classList.add("hidden");
+    }
+  });
 });
 
 // Function untuk membuat animasi perubahan kata
