@@ -7,6 +7,12 @@ module.exports = {
         center: true,
         paddinhg: "16px",
       },
+      colors: {
+        primary: "#3A9842",
+      },
+      fontFamily: {
+        Inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],

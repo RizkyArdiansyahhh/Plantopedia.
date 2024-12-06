@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Inter;
+  }
+}
+
+/* HERO SECTION START*/
+/* * {
+  border: 1px solid red;
+} */
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.play {
+  width: 12rem;
+  height: auto;
+}
+button.play .icon-play {
+  background-color: #282936;
+}
+
+button.play .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.play .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  line-height: 1.6;
+  text-align: center;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
+.frame-active {
+  @apply backdrop-blur-sm white/80 block;
+}
+
+/* HERO SECTION END*/
