@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animasi count pada section informasi
   countPersentasePunah();
+
+  // Animasi Kutipan Dengan GSAP
+  animasiKutipanWithGsap();
 });
 
 // funtion untuk menduplikat kalimat yang terdapat animasi scrolling horizontal
@@ -98,5 +101,48 @@ function countPersentasePunah() {
       "https://dataindonesia.id/varia/detail/data-jumlah-spesies-tumbuhan-yang-terancam-punah-di-dunia-pada-2023",
       "_blank"
     );
+  });
+}
+
+// Animasi kutipan dengan bantuan GSAP
+function animasiKutipanWithGsap() {
+  const kutipanElement = document.getElementById("kutipan");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("kutipan-active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.29,
+    }
+  );
+
+  observer.observe(kutipanElement);
+
+  // Animasi GSAP
+  gsap.registerPlugin(ScrollTrigger);
+  const kutipan = document.querySelectorAll(".kutipan");
+  kutipan.forEach((el) => {
+    const text = new SplitType(el, { types: "chars" });
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        markers: false,
+      },
+      opacity: 0.2,
+      y: 20,
+      stagger: 0.1,
+    });
   });
 }

@@ -12,9 +12,7 @@
 /* * {
   border: 1px solid red;
 } */
-body {
-  height: 3000px;
-}
+
 button {
   position: relative;
   display: inline-block;
@@ -120,6 +118,8 @@ button:hover .button-text {
   }
 }
 /* KALIMAT SECTION END */
-/* INFORMASI SECTION START */
-
-/* INFORMASI SECTION END */
+/* KUTIPAN SECTION START */
+.kutipan-active {
+  @apply bg-opacity-100;
+}
+/* KUTIPAN SECTION END */
