@@ -98,7 +98,7 @@ button:hover .button-text {
 }
 .kalimat-slide-3 {
   @apply py-5;
-  animation: 7s slideToRight infinite linear;
+  animation: 7s slideToLeft infinite linear;
 }
 
 @keyframes slideToLeft {
@@ -123,3 +123,42 @@ button:hover .button-text {
   @apply bg-opacity-100;
 }
 /* KUTIPAN SECTION END */
+
+/* JENIS SECTION START */
+.Angiospermae {
+  background: url("../public/img/Jenis/Angiospermae.jpg");
+}
+.Pteridophyta {
+  background: url("../public/img/Jenis/Pteridophyta.jpg");
+}
+.Bryophyta {
+  background: url("../public/img/Jenis/Bryophyta.jpg");
+}
+.Gymnospermae {
+  background: url("../public/img/Jenis/Gymnospermae.jpg");
+}
+.item {
+  background-position: center;
+  background-size: 75vh;
+  margin: 1vw;
+  border-radius: 2vw;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2vw;
+  opacity: auto;
+}
+.judul {
+  border-radius: 0 0 2vw 2vw;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  opacity: 0;
+}
+label {
+  letter-spacing: 1rem;
+  text-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+}
+/* JENIS SECTION END */

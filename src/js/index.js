@@ -1,8 +1,8 @@
 import {
   animate,
-  scroll,
   inView,
 } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
+import clauserJenisTumbuhan from "./animateJenis.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const words = ["Nurture", "Expand", "Grow"];
@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animasi Kutipan Dengan GSAP
   animasiKutipanWithGsap();
+
+  // Animasi clouser jenis-jenis Tumbuhan
+  clauserJenisTumbuhan();
 });
 
 // funtion untuk menduplikat kalimat yang terdapat animasi scrolling horizontal

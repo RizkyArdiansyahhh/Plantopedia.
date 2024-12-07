@@ -618,12 +618,24 @@ body {
   top: -0.75rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
 
 .left-1\/2 {
   left: 50%;
+}
+
+.right-1\/2 {
+  right: 50%;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-1\/2 {
@@ -643,14 +655,17 @@ body {
   margin-right: auto;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-2 {
@@ -663,6 +678,10 @@ body {
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-4 {
@@ -709,6 +728,18 @@ body {
   height: 2rem;
 }
 
+.h-\[15vh\] {
+  height: 15vh;
+}
+
+.h-\[65vh\] {
+  height: 65vh;
+}
+
+.h-\[90vh\] {
+  height: 90vh;
+}
+
 .h-full {
   height: 100%;
 }
@@ -733,6 +764,10 @@ body {
   width: 1.75rem;
 }
 
+.w-\[10vw\] {
+  width: 10vw;
+}
+
 .w-full {
   width: 100%;
 }
@@ -748,6 +783,11 @@ body {
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -828,8 +868,16 @@ body {
   overflow: visible;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-\[0_0_50\%_50\%\] {
@@ -842,6 +890,10 @@ body {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border-b-4 {
@@ -911,6 +963,11 @@ body {
   padding: 1rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -951,8 +1008,20 @@ body {
   padding-bottom: 1.25rem;
 }
 
+.pb-\[10vh\] {
+  padding-bottom: 10vh;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
 .pt-0 {
   padding-top: 0px;
+}
+
+.pt-\[20vh\] {
+  padding-top: 20vh;
 }
 
 .text-center {
@@ -973,9 +1042,9 @@ body {
   line-height: 2.25rem;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-base {
@@ -993,9 +1062,9 @@ body {
   line-height: 1.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -1028,6 +1097,10 @@ body {
 
 .leading-relaxed {
   line-height: 1.625;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-\[\#FFB22C\] {
@@ -1070,6 +1143,10 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1084,10 +1161,6 @@ body {
 
 .duration-300 {
   transition-duration: 300ms;
-}
-
-.duration-700 {
-  transition-duration: 700ms;
 }
 
 .duration-500 {
@@ -1211,7 +1284,7 @@ button:hover .button-text {
 .kalimat-slide-3 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  animation: 7s slideToRight infinite linear;
+  animation: 7s slideToLeft infinite linear;
 }
 
 @keyframes slideToLeft {
@@ -1244,8 +1317,64 @@ button:hover .button-text {
 
 /* KUTIPAN SECTION END */
 
+/* JENIS SECTION START */
+
+.Angiospermae {
+  background: url("../public/img/Jenis/Angiospermae.jpg");
+}
+
+.Pteridophyta {
+  background: url("../public/img/Jenis/Pteridophyta.jpg");
+}
+
+.Bryophyta {
+  background: url("../public/img/Jenis/Bryophyta.jpg");
+}
+
+.Gymnospermae {
+  background: url("../public/img/Jenis/Gymnospermae.jpg");
+}
+
+.item {
+  background-position: center;
+  background-size: 75vh;
+  margin: 1vw;
+  border-radius: 2vw;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2vw;
+  opacity: auto;
+}
+
+.judul {
+  border-radius: 0 0 2vw 2vw;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  opacity: 0;
+}
+
+label {
+  letter-spacing: 1rem;
+  text-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* JENIS SECTION END */
+
 .hover\:animate-none:hover {
   animation: none;
+}
+
+.hover\:border:hover {
+  border-width: 1px;
+}
+
+.hover\:border-secondary:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 91 76 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-primary:hover {
@@ -1263,9 +1392,19 @@ button:hover .button-text {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(58 152 66 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-secondary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 91 76 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {
@@ -1318,6 +1457,11 @@ button:hover .button-text {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .md\:text-base {
@@ -1400,6 +1544,11 @@ button:hover .button-text {
     flex-direction: row;
   }
 
+  .lg\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .lg\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1408,6 +1557,11 @@ button:hover .button-text {
   .lg\:py-14 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+  }
+
+  .lg\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .lg\:pt-14 {
@@ -1421,6 +1575,16 @@ button:hover .button-text {
 
   .lg\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 
@@ -1439,9 +1603,8 @@ button:hover .button-text {
     line-height: 1.75rem;
   }
 
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
+  .lg\:font-bold {
+    font-weight: 700;
   }
 
   .lg\:leading-relaxed {
