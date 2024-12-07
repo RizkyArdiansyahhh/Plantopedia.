@@ -149,3 +149,41 @@ function animasiKutipanWithGsap() {
     });
   });
 }
+
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const carouselCards = document.querySelector(".carousel-card");
+const cards = document.querySelectorAll(".card-artikel");
+
+let currentIndex = 0;
+
+function updateButtons() {
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex === cards.length - 1;
+}
+
+function moveCarousel() {
+  if (currentIndex <= cards.length) {
+    const offset = -currentIndex * cards[0].offsetWidth;
+    carouselCards.style.transform = `translateX(${offset}px)`;
+  }
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    moveCarousel();
+    updateButtons();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < cards.length - 2) {
+    currentIndex++;
+    moveCarousel();
+    updateButtons();
+  }
+});
+
+// Initialize button states
+updateButtons();

@@ -162,3 +162,90 @@ label {
   text-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
 }
 /* JENIS SECTION END */
+
+/* ARTIKEL SECTION START */
+
+.card-asrtikel-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .heading {
+  font-weight: 700;
+  color: #005b4c;
+}
+
+.content .para {
+  line-height: 1.5;
+}
+
+.content .btn {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: #005b4c;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-asrtikel-left::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background: #005b4c;
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-asrtikel-left:hover::before {
+  width: 100%;
+}
+
+.card-asrtikel-left:hover {
+  box-shadow: none;
+}
+
+.card-asrtikel-left:hover .content .heading {
+  color: #fff !important;
+}
+
+.card-asrtikel-left:hover .content .para {
+  color: #fff !important;
+}
+
+.card-asrtikel-left:hover .content .btn {
+  color: #fff;
+  background: #ffb22c;
+}
+
+.content .btn:hover {
+  outline: 2px solid #ffb22c;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.content .btn:active {
+  box-shadow: none;
+}
+
+/* ARTIKEL SECTION END */
