@@ -670,6 +670,16 @@ body {
   margin-bottom: 5rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .-mt-10 {
   margin-top: -2.5rem;
 }
@@ -700,6 +710,14 @@ body {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -794,6 +812,18 @@ body {
   height: 100vh;
 }
 
+.h-\[2px\] {
+  height: 2px;
+}
+
+.h-\[70vh\] {
+  height: 70vh;
+}
+
+.h-\[50vh\] {
+  height: 50vh;
+}
+
 .max-h-80 {
   max-height: 20rem;
 }
@@ -844,6 +874,14 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-\[70vh\] {
+  width: 70vh;
 }
 
 .min-w-80 {
@@ -1061,6 +1099,16 @@ body {
   background-color: rgb(255 255 255 / 0.4);
 }
 
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
@@ -1168,6 +1216,10 @@ body {
 
 .pt-\[20vh\] {
   padding-top: 20vh;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
 }
 
 .text-center {
@@ -1297,6 +1349,16 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-400 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -1708,6 +1770,16 @@ label {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-slate-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-slate-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity, 1));
+}
+
 .hover\:no-underline:hover {
   text-decoration-line: none;
 }
@@ -1842,6 +1914,11 @@ label {
 
   .md\:text-lg {
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
@@ -1986,6 +2063,11 @@ label {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:font-bold {
