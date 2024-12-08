@@ -3,11 +3,15 @@ import {
   inView,
 } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
 import clauserJenisTumbuhan from "./animateJenis.js";
+import animasiNav from "./nav.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const words = ["Nurture", "Expand", "Grow"];
   changeWord(words);
   cloneKalimat();
+
+  // Animasi navigasi
+  // animasiNav();
 
   // Event untuk frame video
   eventFrameVide();
@@ -20,6 +24,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animasi clouser jenis-jenis Tumbuhan
   clauserJenisTumbuhan();
+});
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.classList.toggle("navbar-fixed", window.scrollY > header.offsetTop);
+});
+
+const humberger = document.querySelector("#humberger");
+const navItem = document.getElementById("nav-item");
+
+humberger.addEventListener("click", () => {
+  humberger.classList.toggle("humberger-active");
+  navItem.classList.toggle("hidden");
 });
 
 // funtion untuk menduplikat kalimat yang terdapat animasi scrolling horizontal
