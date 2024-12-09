@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="../dist/style.css" />
+  </head>
+  <body>
+    <main class="relative">
+      <div class="w-full h-screen bg-secondary lg:bg-white lg:flex flex-row">
+        <div
+          class="w-full lg:w-1/2 h-1/5 bg-secondary flex justify-center items-center lg:hidden"
+        >
+          <p class="text-4xl font-bold text-white">
+            Planto<span class="text-lightSecondary">pedia</span>.
+          </p>
+        </div>
+        <div
+          class="w-full h-4/5 lg:w-1/2 lg:h-full flex flex-col justify-center items-center pt-10 rounded-[50px_50px_0_0] bg-white lg:rounded-none overflow-hidden lg:pt-0"
+        >
+          <div class="w-3/4 flex flex-col gap-y-5 md:w-2/3 lg:w-1/2">
+            <h1 class="text-3xl font-bold text-center">Welcome Back</h1>
+            <p class="text-lg font-medium text-center">
+              Please enter your details
+            </p>
+            <div
+              class="google flex flex-row justify-center items-center gap-x-4 px-10 py-3 bg-slate-50 border border-slate-200 hover:border-secondary hover:shadow-[0px_0px_0_2px_rgba(0,0,0,0.2)] transition duration-300 ease-in-out rounded-lg"
+            >
+              <div class="logo h-8 w-8">
+                <img src="../public/img/icon/google.svg" alt="" />
+              </div>
+              <p class="text-base font-semibold">Login with Google</p>
+            </div>
+            <div
+              class="facebook flex flex-row justify-center items-center gap-x-4 px-10 py-3 bg-slate-50 rounded-lg border border-slate-200 hover:border-secondary hover:shadow-[0px_0px_0_2px_rgba(0,0,0,0.2)] transition duration-300 ease-in-out"
+            >
+              <div class="logo h-8 w-8">
+                <img src="../public/img/icon/facebook.png" alt="" />
+              </div>
+              <p class="text-base font-semibold">Login with Facebook</p>
+            </div>
+            <div class="flex items-center flex-row gap-1">
+              <div class="h-[2px] w-1/2 bg-[rgba(0,0,0,0.2)] relative"></div>
+              <p class="text-[rgba(0,0,0,0.5)]">OR</p>
+              <div class="h-[2px] w-1/2 bg-[rgba(0,0,0,0.2)] relative"></div>
+            </div>
+            <form action="#" class="flex flex-col gap-y-5" id="loginForm">
+              <div>
+                <span
+                  class="after:content-['*'] after:ml-0.5 after:text-red-500"
+                >
+                  Username
+                </span>
+                <input
+                  id="username"
+                  class="border border-slate-200 hover:border-secondary transition duration-300 ease-in-out focus:border-secondary focus:shadow- w-full pr-10 pl-3 py-3 focus:ring-secondary focus:outline-0 rounded-lg"
+                  type="text"
+                  placeholder="Uername123"
+                  name="Username"
+                  required
+                />
+              </div>
+              <div>
+                <span
+                  class="after:content-['*'] after:ml-0.5 after:text-red-500"
+                >
+                  Password
+                </span>
+                <input
+                  id="password"
+                  class="border border-slate-200 hover:border-secondary transition duration-300 ease-in-out focus:border-secondary focus:shadow- w-full pr-10 pl-3 py-3 focus:ring-secondary focus:outline-0 rounded-lg"
+                  type="password"
+                  placeholder="Enter your password"
+                  name="Username"
+                  required
+                />
+              </div>
+              <div class="w-full flex justify-end">
+                <p
+                  class="text-base font-medium text-secondary hover:text-lightSecondary hover:underline transition duration-300 ease-in-out cursor-pointer"
+                >
+                  Forgot Password?
+                </p>
+              </div>
+              <button
+                type="submit"
+                class="bg-secondary py-4 rounded-lg px-3 flex justify-center items-center group hover:bg-lightSecondary transition duration-300 ease-in-out text-white font-semibold text-lg w-full"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="hidden lg:w-1/2 h-full relative lg:flex justify-center items-center"
+        >
+          <div
+            class="absolute right-0 left-0 bottom-0 top-0 bg-secondary"
+          ></div>
+          <div
+            class="card rounded-lg h-1/2 w-1/2 backdrop-blur-sm bg-white/30 relative"
+          >
+            <p
+              class="text-2xl font-bold text-white py-10 pl-5 pr-2 leading-relaxed xl:text-4xl"
+            >
+              Log in and explore the plant world!
+            </p>
+            <img
+              src="../public/img/login-hero.png"
+              alt=""
+              class="absolute bottom-0 lg:-right-20 xl:-right-24 2xl:-right-32 h-3/4 w-96 object-cover"
+            />
+            <img
+              src="../public/img/login-1.png"
+              alt=""
+              class="w-20 h-20 xl:w-[100px] xl:h-[100px] p-2 xl:p-0 bg-white rounded-full absolute bottom-28 -left-10"
+            />
+            <img
+              src="../public/img/login-2.png"
+              alt=""
+              class="w-16 h-16 xl:w-20 xl:h-20 p-2 xl:p-0 bg-white rounded-full absolute -top-3 -right-3"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../src/js/login.js"></script>
+  </body>
+</html>

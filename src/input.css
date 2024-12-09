@@ -24,7 +24,7 @@
 }
 
 .navbar-fixed {
-  @apply fixed z-[999] backdrop-blur-sm bg-white/70;
+  @apply fixed z-50 backdrop-blur-sm bg-white/70;
   box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);
 }
 

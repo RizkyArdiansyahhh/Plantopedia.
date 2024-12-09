@@ -5,9 +5,8 @@ const clauserJenisTumbuhan = () => {
     const overlay = item.children[0];
     const judul = item.children[1];
 
-    // Reset semua item kecuali yang sedang diklik
     items.forEach((it, ind) => {
-      if (i === ind) return; // Skip elemen yang diklik
+      if (i === ind) return;
       it.dataset.clicked = "false";
       gsap.to(it, { width: "10vw", duration: 2, ease: "elastic(1, 0.6)" });
       gsap.to(it.children[0], { opacity: 0, duration: 1.5 }); // Reset overlay
@@ -33,7 +32,7 @@ const clauserJenisTumbuhan = () => {
 
     // Animasi judul
     gsap.to(judul, {
-      opacity: isClicked ? 0 : 1, // Ubah logika opacity
+      opacity: isClicked ? 0 : 1,
       duration: 2.5,
       ease: "elastic(1, 0.3)",
     });
