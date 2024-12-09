@@ -712,14 +712,14 @@ body {
   margin-bottom: 5rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-24 {
   margin-top: 6rem;
   margin-bottom: 6rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .-mt-10 {
@@ -780,10 +780,6 @@ body {
 
 .mt-52 {
   margin-top: 13rem;
-}
-
-.mb-9 {
-  margin-bottom: 2.25rem;
 }
 
 .block {
@@ -970,6 +966,10 @@ body {
   width: 75%;
 }
 
+.w-3\/5 {
+  width: 60%;
+}
+
 .w-32 {
   width: 8rem;
 }
@@ -1008,10 +1008,6 @@ body {
 
 .w-full {
   width: 100%;
-}
-
-.w-3\/5 {
-  width: 60%;
 }
 
 .min-w-80 {
@@ -1170,16 +1166,12 @@ body {
   row-gap: 1.25rem;
 }
 
-.gap-y-8 {
-  row-gap: 2rem;
-}
-
-.gap-y-10 {
-  row-gap: 2.5rem;
-}
-
 .gap-y-7 {
   row-gap: 1.75rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
 }
 
 .self-end {
@@ -1581,11 +1573,6 @@ body {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-base {
@@ -2569,11 +2556,6 @@ ul {
     line-height: 1.25rem;
   }
 
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .md\:font-semibold {
     font-weight: 600;
   }
@@ -2682,16 +2664,16 @@ ul {
     width: 40%;
   }
 
-  .lg\:w-full {
-    width: 100%;
+  .lg\:w-3\/5 {
+    width: 60%;
   }
 
   .lg\:w-4\/5 {
     width: 80%;
   }
 
-  .lg\:w-3\/5 {
-    width: 60%;
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:max-w-full {

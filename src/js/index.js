@@ -1,6 +1,7 @@
 import {
   animate,
   inView,
+  stagger,
 } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
 import clauserJenisTumbuhan from "./animateJenis.js";
 import animasiNav from "./nav.js";
@@ -30,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function untuk handle order ke whatsApp
   orderToWhatsapp();
+
+  animateToALLElement();
 });
 
 // funtion untuk menduplikat kalimat yang terdapat animasi scrolling horizontal
@@ -212,5 +215,33 @@ function orderToWhatsapp() {
         window.location.href = "../../pages/login.html";
       }
     });
+  });
+}
+
+function animateToALLElement() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".card-produk", {
+    scrollTrigger: {
+      trigger: ".card-produk",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    y: -100,
+    duration: 1.5,
+    stagger: 0.1,
+  });
+
+  gsap.from(".hero-shop", {
+    scrollTrigger: {
+      trigger: ".hero-shop",
+      start: "top 100%",
+      end: "bottom 20%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    duration: 1.5,
   });
 }
