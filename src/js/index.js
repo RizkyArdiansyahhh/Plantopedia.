@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animasi clouser jenis-jenis Tumbuhan
   clauserJenisTumbuhan();
+
+  // Animasi carousel artikel
+  animateToArtikel();
+
+  // Function untuk handle order ke whatsApp
+  orderToWhatsapp();
 });
 
 // funtion untuk menduplikat kalimat yang terdapat animasi scrolling horizontal
@@ -126,7 +132,7 @@ function animasiKutipanWithGsap() {
     },
     {
       root: null,
-      rootMargin: "0px",
+      rootMargin: "200px",
       threshold: 0.29,
     }
   );
@@ -154,40 +160,57 @@ function animasiKutipanWithGsap() {
   });
 }
 
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
-const carouselCards = document.querySelector(".carousel-card");
-const cards = document.querySelectorAll(".card-artikel");
+// function untuk membuat animasi carousel artikel
+function animateToArtikel() {
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const carouselCards = document.querySelector(".carousel-card");
+  const cards = document.querySelectorAll(".card-artikel");
 
-let currentIndex = 0;
+  let currentIndex = 0;
 
-function updateButtons() {
-  prevBtn.disabled = currentIndex === 0;
-  nextBtn.disabled = currentIndex === cards.length - 1;
+  function updateButtons() {
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === cards.length - 1;
+  }
+
+  function moveCarousel() {
+    if (currentIndex <= cards.length) {
+      const offset = -currentIndex * cards[0].offsetWidth;
+      carouselCards.style.transform = `translateX(${offset}px)`;
+    }
+  }
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      moveCarousel();
+      updateButtons();
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < cards.length - 2) {
+      currentIndex++;
+      moveCarousel();
+      updateButtons();
+    }
+  });
+
+  updateButtons();
 }
 
-function moveCarousel() {
-  if (currentIndex <= cards.length) {
-    const offset = -currentIndex * cards[0].offsetWidth;
-    carouselCards.style.transform = `translateX(${offset}px)`;
-  }
+function orderToWhatsapp() {
+  const btnShop = document.querySelectorAll(".btnShop");
+  const isLogin = sessionStorage.getItem("isLogin");
+  btnShop.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (isLogin) {
+        btn.setAttribute("href", "https://wa.me/62895323382357");
+      } else {
+        window.location.href = "../../pages/login.html";
+      }
+    });
+  });
 }
-
-prevBtn.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    moveCarousel();
-    updateButtons();
-  }
-});
-
-nextBtn.addEventListener("click", () => {
-  if (currentIndex < cards.length - 2) {
-    currentIndex++;
-    moveCarousel();
-    updateButtons();
-  }
-});
-
-// Initialize button states
-updateButtons();
