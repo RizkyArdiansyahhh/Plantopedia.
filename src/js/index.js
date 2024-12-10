@@ -280,7 +280,7 @@ gsap.from(".informasi-to-left", {
   },
 
   opacity: 0,
-  x: 100,
+  y: -100,
   duration: 2,
   stagger: 0.1,
 });
@@ -327,7 +327,7 @@ gsap.from(".team-to-right", {
     end: "bottom 20%",
     toggleActions: "play none none none",
   },
-  x: -100,
+  y: -100,
   opacity: 0,
   duration: 2,
   stagger: 0.1,
@@ -339,7 +339,7 @@ gsap.from(".team-to-left", {
     end: "bottom 20%",
     toggleActions: "play none none none",
   },
-  x: 100,
+  y: -100,
   opacity: 0,
   duration: 2,
   stagger: 0.1,
