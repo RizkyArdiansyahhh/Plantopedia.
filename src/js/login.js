@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         timer: 1500,
       }).then(() => {
         sessionStorage.setItem("isLogin", true);
-        window.location.href = "../../index.html";
+        window.location.href = "../index.html";
       });
     } else {
       Swal.fire({

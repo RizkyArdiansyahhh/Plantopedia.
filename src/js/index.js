@@ -135,7 +135,7 @@ function animasiKutipanWithGsap() {
     },
     {
       root: null,
-      rootMargin: "200px",
+      rootMargin: "0px",
       threshold: 0.29,
     }
   );
@@ -210,9 +210,9 @@ function orderToWhatsapp() {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       if (isLogin) {
-        btn.setAttribute("href", "https://wa.me/62895323382357");
+        window.location.href = "https://wa.me/62895323382357";
       } else {
-        window.location.href = "../../pages/login.html";
+        window.location.href = "./pages/login.html";
       }
     });
   });
@@ -245,3 +245,137 @@ function animateToALLElement() {
     duration: 1.5,
   });
 }
+
+gsap.from("#lembaga", {
+  scrollTrigger: {
+    trigger: ".container-card-lembaga",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+  opacity: 0,
+  y: -100,
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from(".item", {
+  scrollTrigger: {
+    trigger: ".item",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+
+  y: -100,
+  duration: 2,
+  stagger: 0.1,
+});
+
+gsap.from(".informasi-to-left", {
+  scrollTrigger: {
+    trigger: ".container-informasi",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+
+  opacity: 0,
+  x: 100,
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from(".img-informasi", {
+  scrollTrigger: {
+    trigger: ".container-informasi",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+
+  opacity: 0,
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from(".animasi-to-right-artikel", {
+  scrollTrigger: {
+    trigger: ".container-artikel",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+  x: -100,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from(".carousel-card", {
+  scrollTrigger: {
+    trigger: ".card-artikel",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+  x: 100,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from(".team-to-right", {
+  scrollTrigger: {
+    trigger: ".team-to-right",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+  x: -100,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from(".team-to-left", {
+  scrollTrigger: {
+    trigger: ".container-team-to-left",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+  x: 100,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from(".card-foto", {
+  scrollTrigger: {
+    trigger: ".card-foto",
+    start: "top 80%",
+    end: "bottom 20%",
+    toggleActions: "play none none none",
+  },
+  y: -100,
+  opacity: 0,
+  duration: 2,
+  stagger: 0.1,
+});
+
+gsap.fromTo(
+  ".animasi-kata-to-right",
+  { x: -100, opacity: 0 },
+  {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out",
+  }
+);
+gsap.fromTo(
+  ".animasi-kata-to-left",
+  { x: 100, opacity: 0 },
+  {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out",
+  }
+);
